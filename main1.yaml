@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Perform full patching
+    packages:
+      name: '*'
+      state: latest
+    shell: force_apt_get=true
